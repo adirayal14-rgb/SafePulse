@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Dashboard</h2>
+    <p id="welcomeText"></p>
+
+    <button onclick="location.href='sos.html'">Go to SOS</button>
+    <button onclick="location.href='contacts.html'">Add Contacts</button>
+</div>
+
+<div class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="sos.html">SOS</a>
+    <a href="contacts.html">Contacts</a>
+</div>
+
+<script>
+let name = localStorage.getItem("username");
+document.getElementById("welcomeText").innerText = "Welcome " + name;
+</script>
+
+</body>
+</html>

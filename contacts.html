@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Add Trusted Contact</h2>
+
+    <form onsubmit="saveContact(event)">
+        <input type="text" placeholder="Contact Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <select id="batch" required>
+            <option value="">Select Batch</option>
+            <option>Batch 1</option>
+            <option>Batch 2</option>
+        </select>
+
+        <button type="submit">Save Contact</button>
+    </form>
+</div>
+
+<div class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="sos.html">SOS</a>
+</div>
+
+<script>
+function saveContact(event) {
+    event.preventDefault();
+
+    let batch = document.getElementById("batch").value;
+
+    alert("Contact added to " + batch + " successfully!");
+}
+</script>
+
+</body>
+</html>
